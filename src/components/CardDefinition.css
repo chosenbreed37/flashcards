@@ -1,0 +1,21 @@
+.definition {
+    margin: 20px auto;
+}
+
+.field {
+    margin: 5px auto;
+}
+
+.caption {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.value {
+    margin-left: 5px;
+}
+
+.description {
+    width: 90%;
+    margin: 0 auto;
+}

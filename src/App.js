@@ -2,17 +2,16 @@ import React, { Component } from 'react';
 import logo from './assets/images/mustache.png';
 import './App.css';
 
+import { Deck } from './components/Deck';
+
 class App extends Component {
 
   render() {
+    const { appState, setAppState } = this.props;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Flashcards</h1>
-        </header>
-        <p className="App-intro">
-        </p>
+      <div className='App'>
+        <Deck {...this.props } />
       </div>
     );
   }
