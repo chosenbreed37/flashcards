@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
 import { words } from './data/model';
 
-const initialState = {
-    words,
-    currentWordIndex: 0,
-    currentWord: words[0],
-    canGoForward: (state) => state.currentWordIndex < (words.length - 1),
-    canGoBack: (state) => state.currentWordIndex > 0,
+const operations = {
+    canGoForward: (state) => state.currentIndex < (state.words.length - 1),
+    canGoBack: (state) => state.currentIndex > 0,
     goForward: () => (state) => {
-        const nextIndex = state.currentWordIndex + 1;
-        return { ...state, currentWordIndex: nextIndex, currentWord: words[nextIndex] }
+        const nextIndex = state.currentIndex + 1;
+        return { ...state, currentIndex: nextIndex }
     },
     goBack: () => (state) => {
-        const nextIndex = state.currentWordIndex - 1;
-        return { ...state, currentWordIndex: nextIndex, currentWord: words[nextIndex] }
-    },
+        const nextIndex = state.currentIndex - 1;
+        return { ...state, currentIndex: nextIndex }
+    }
+}
+
+const initialState = {
+    words,
+    currentIndex: 0
 };
 
 class AppState extends Component {
     constructor(props) {
         super(props);
-        this.state = initialState;
+        this.state = props.state || initialState;
     }
 
     setAppState = (updater, callback) => {
@@ -41,7 +43,8 @@ class AppState extends Component {
                 {React.Children.map(this.props.children, child => {
                     return React.cloneElement(child, {
                         appState: this.state,
-                        setAppState: this.setAppState
+                        setAppState: this.setAppState,
+                        operations
                     });
                 })}
             </div>

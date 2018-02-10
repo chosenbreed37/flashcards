@@ -29,18 +29,18 @@ describe('CardDefinition', () => {
     it('renders the description', () => {
         const p = cardDefinition().find('#description');
         expect(p.length).toBeGreaterThan(0);
-        expect(p.text(), props.description);
+        expect(p.text()).toBe(props.description);
     });
 
     it('renders the synonyms', () => {
         const field = cardDefinition().find('#synonyms');
         expect(field.length).toBeGreaterThan(0);
-        expect(field.text(), props.synonyms);
+        expect(field.text()).toBe(props.synonyms);
     });
 
     it('renders the antonyms', () => {
         const field = cardDefinition().find('#antonyms');
         expect(field.length).toBeGreaterThan(0);
-        expect(field.text(), props.antonyms);
+        expect(field.text()).toBe(props.antonyms);
     });
 });

@@ -2,7 +2,7 @@
     "words": [
         {
             "id": "1",
-            "name": "lorem",
+            "name": "lorem 1",
             "type": "noun",
             "definitions": [
                 {
@@ -22,7 +22,7 @@
         },
         {
             "id": "2",
-            "name": "lorem",
+            "name": "lorem 2",
             "type": "noun",
             "definitions": [
                 {
@@ -42,7 +42,7 @@
         },
         {
             "id": "3",
-            "name": "lorem",
+            "name": "lorem 3",
             "type": "noun",
             "definitions": [
                 {

@@ -10,26 +10,30 @@ import './Deck.css';
 export class Deck extends Component {
 
     render() {
-        const { setAppState } = this.props;
-        const { appState } = this.props;
-        const { currentWord: { name, type, definitions }, goForward, goBack, canGoForward, canGoBack }  = appState;
+        const { setAppState, operations, appState } = this.props;
+        const { words, currentIndex } = appState;
+
+        const { name, type, definitions } = words[currentIndex];
+        const { goForward, goBack, canGoForward, canGoBack } = operations;
         const disableBack = !canGoBack(appState);
         const disableForward = !canGoForward(appState);
 
         return (
             <Paper zDepth={2}>
                 <Card>
-                    <CardHeader
-                        title={name} titleStyle={{ fontWeight: 'bold', fontSize: 'larger' }}
-                        subtitle={`(${type})`}
-                    />
+                    <CardHeader>
+                        <div className='header'>
+                            <span id='title' className='title'>{name}</span>
+                            <span id='subtitle' className='subtitle'>{`(${type})`}</span>
+                        </div>
+                    </CardHeader>
                     <Divider />
                     <CardText>
                         {definitions.map(d => (<CardDefinition key={d.id} {...d} />))}
                     </CardText>
                     <CardActions>
-                        <FlatButton label="Back" onClick={() => setAppState(goBack)} disabled={disableBack} />
-                        <FlatButton label="Next" onClick={() => setAppState(goForward)} disabled={disableForward} />
+                        <FlatButton id='backButton' label="Back" onClick={() => setAppState(goBack)} disabled={disableBack} />
+                        <FlatButton id='nextButton' label="Next" onClick={() => setAppState(goForward)} disabled={disableForward} />
                     </CardActions>
                 </Card>
             </Paper>)
