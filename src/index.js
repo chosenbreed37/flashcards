@@ -15,4 +15,4 @@ ReactDOM.render(
         </AppState>
     </MuiThemeProvider>,
     document.getElementById('root'));
-registerServiceWorker();
+ registerServiceWorker();
