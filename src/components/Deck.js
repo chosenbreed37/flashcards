@@ -20,7 +20,7 @@ export class Deck extends Component {
 
         return (
             <Paper zDepth={2}>
-                <Card>
+                <Card className='deck'>
                     <CardHeader>
                         <div className='header'>
                             <span id='title' className='title'>{name}</span>
