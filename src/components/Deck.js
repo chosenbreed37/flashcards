@@ -29,7 +29,7 @@ export class Deck extends Component {
                     </CardHeader>
                     <Divider />
                     <CardText>
-                        {definitions.map(d => (<CardDefinition key={d.id} {...d} />))}
+                        {definitions.map((d, index) => (<CardDefinition key={index} {...d} />))}
                     </CardText>
                     <CardActions>
                         <FlatButton id='backButton' label="Back" onClick={() => setAppState(goBack)} disabled={disableBack} />

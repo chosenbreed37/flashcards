@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { words } from './data/model';
+import { model } from './data/model';
 
 const operations = {
     canGoForward: (state) => state.currentIndex < (state.words.length - 1),
@@ -15,7 +15,7 @@ const operations = {
 }
 
 const initialState = {
-    words,
+    words: model.words,
     currentIndex: 0
 };
 

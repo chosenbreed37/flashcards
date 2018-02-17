@@ -2,10 +2,10 @@ import React from 'react';
 
 import './CardDefinition.css';
 
-export const CardDefinition = ({ description, antonyms, synonyms }) => {
+export const CardDefinition = ({ definition, antonyms, synonyms }) => {
     return (
         <div className='definition'>
-            <p id='description' className='description'>{description}</p>
+            <p id='description' className='description'>{definition}</p>
             <div className='field'>
                 <label className='caption'>synonyms</label>
                 <label id='synonyms' className='field'>{synonyms}</label>

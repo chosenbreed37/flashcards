@@ -19,7 +19,7 @@ describe('CardDefinition', () => {
 
     beforeEach(() => {
         props = {
-            description: 'Lorem ipsum dolor met',
+            definition: 'Lorem ipsum dolor met',
             synonyms: 'Lorem ipsum dolor met',
             antonyms: 'Lorem ipsum dolor met'
         };
@@ -29,7 +29,7 @@ describe('CardDefinition', () => {
     it('renders the description', () => {
         const p = cardDefinition().find('#description');
         expect(p.length).toBeGreaterThan(0);
-        expect(p.text()).toBe(props.description);
+        expect(p.text()).toBe(props.definition);
     });
 
     it('renders the synonyms', () => {

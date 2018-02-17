@@ -4,19 +4,21 @@ import Adapter from 'enzyme-adapter-react-16';
 import { Deck } from './Deck';
 import { CardDefinition } from './CardDefinition';
 import AppState from '../AppState';
-import { words } from '../data/model';
+import { model } from '../data/model';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 configure({ adapter: new Adapter() });
 
 const initialState = {
-    words,
+    words: model.words,
     currentIndex: 0
 };
 
 describe('Deck', () => {
     let props;
     let mountedDeck;
+    const words = model.words;
+
     const deck = (state) => {
         if (!mountedDeck) {
             mountedDeck = mount(
