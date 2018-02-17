@@ -20,3 +20,8 @@
     width: 90%;
     margin: 0 auto;
 }
+
+.example {
+    font-family: 'Times New Roman';
+    font-style: italic;
+}

@@ -2,6 +2,10 @@
     font-size: 16px;
 }
 
+.definitions {
+    height: 300px;
+}
+
 .header span {
     margin: 5px;
 }
