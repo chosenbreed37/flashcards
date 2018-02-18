@@ -603,6 +603,237 @@
                 }
             ],
             "derivations": []
+        },
+        {
+            "name": "curious",
+            "type": "adj",
+            "definitions": [
+                {
+                    "definition": "eager to know or learn something",
+                    "example": "The boy was curious to find out what his parents had bought him for Christmas",
+                    "synonyms": "inquisitive, interested, investigative",
+                    "antonyms": "incurious, unconcerned"
+                },
+                {
+                    "definition": "strange, unusual or unexpected",
+                    "example": "She found a curious old clock in the attic",
+                    "synonyms": "strange, odd, peculiar, unusual, queer",
+                    "antonyms": "ordinary"
+                }
+            ],
+            "derivations": [
+                {
+                    "derivation": "curiously",
+                    "type": "adverb"
+                }
+            ]
+        },
+        {
+            "name": "debrief",
+            "type": "verb",
+            "definitions": [
+                {
+                    "definition": "question (someone, typically a soldier or spy) about a completed mission or undertaking",
+                    "example": "The witness was debriefed about the crime scene",
+                    "synonyms": "cross-examine, interview, interrogate, question, probe",
+                    "antonyms": ""
+                }
+            ],
+            "derivations": [
+                {
+                    "derivation": "debrief",
+                    "type": "noun"
+                }
+            ]
+        },
+        {
+            "name": "deceit",
+            "type": "noun",
+            "definitions": [
+                {
+                    "definition": "dishonest behaviour, behaviour that is meant to fool or trick someone",
+                    "example": "We were angry when we discovered that her excuse was really a deceit",
+                    "synonyms": "deception, dishonesty, fraud, treachery, trickery",
+                    "antonyms": "fairness, forthrightness, frankness, honesty, sincerity, trustworthiness"
+                }
+            ],
+            "derivations": []
+        },
+        {
+            "name": "deliberate",
+            "type": "adj",
+            "definitions": [
+                {
+                    "definition": "done consciously and intentionally",
+                    "example": "It was a deliberate shot, fired after much thought",
+                    "synonyms": "intentional, calculated, conscious, intended, planned, knowing, wilful, purposeful, premeditated",
+                    "antonyms": "accidental, unintentional"
+                },
+                {
+                    "definition": "engage in long and careful consideration until you reach a conclusion",
+                    "example": "She deliberated over the menu to decide her order",
+                    "synonyms": "ponder, consider, contemplate",
+                    "antonyms": "disregard, neglect, ignore"
+                }
+            ],
+            "derivations": []
+        },
+        {
+            "name": "demolish",
+            "type": "verb",
+            "definitions": [
+                {
+                    "definition": "to completely destroy a building, especially in order to use the land for something else",
+                    "example": "A number of houses were demolished so that the supermarket could be built",
+                    "synonyms": "destroy, flatten, level, bulldoze, topple",
+                    "antonyms": "construct, build, raise"
+                },
+                {
+                    "definition": "to prove that an argument or theory is wrong",
+                    "example": "He completely demolished all her arguments",
+                    "synonyms": "disprove, discredit, overturn, refute",
+                    "antonyms": "confirm, strengthen"
+                }
+            ],
+            "derivations": []
+        },
+        {
+            "name": "depot",
+            "type": "noun",
+            "definitions": [
+                {
+                    "definition": "a building where supplies or vehicles, especially buses are kept",
+                    "example": "a bus depot",
+                    "synonyms": "terminal",
+                    "antonyms": ""
+                },
+                {
+                    "definition": "a place for the storage of large quantities of equipment, food or goods",
+                    "example": "storehouse, warehouse, garage",
+                    "synonyms": "",
+                    "antonyms": ""
+                }
+            ],
+            "derivations": []
+        },
+        {
+            "name": "derelict",
+            "type": "adj",
+            "definitions": [
+                {
+                    "definition": "in a very poor condition as a result of disuse and neglect",
+                    "example": "The cities were derelict and dying",
+                    "synonyms": "damned, doomed, dilapidated, ramshackle, run down, abandoned, deserted, delinquent",
+                    "antonyms": "reclaimed, rehabbed, restored"
+                },
+                {
+                    "definition": "negligent, slack, irresponsible",
+                    "example": "The guards were derelict in their duty",
+                    "synonyms": "",
+                    "antonyms": ""
+                }
+            ],
+            "derivations": [
+                {
+                    "derivation": "derelict",
+                    "type": "noun"
+                }
+            ]
+        },
+        {
+            "name": "despise",
+            "type": "verb",
+            "definitions": [
+                {
+                    "definition": "to dislike (something or someone) very much",
+                    "example": "I despise marmite and refuse to eat it!",
+                    "synonyms": "abhor, detest, hate, loathe, exercrate",
+                    "antonyms": "accept, admire, adore, approve, cherish, praise, respect"
+                }
+            ],
+            "derivations": []
+        },
+        {
+            "name": "destitute",
+            "type": "adj",
+            "definitions": [
+                {
+                    "definition": "without money, food, a home, or possessions",
+                    "example": "His business failures left him destitute",
+                    "synonyms": "bankrupt, exhausted, impoverished, indigent, needy, penniless, poor",
+                    "antonyms": "affluent, rich, wealthy"
+                }
+            ],
+            "derivations": [
+                {
+                    "derivation": "destitution",
+                    "type": "noun"
+                }
+            ]
+        },
+        {
+            "name": "device",
+            "type": "noun",
+            "definitions": [
+                {
+                    "definition": "an object or machine that has been invented for a particular purpose",
+                    "example": "A barometer is a device to measure air pressure",
+                    "synonyms": "gadget, tool, appliance, apparatus, instrument, machine",
+                    "antonyms": ""
+                },
+                {
+                    "definition": "a plan, scheme, or trick with a particular aim",
+                    "example": "Writing a public letter is a traditional device for signalling dissent",
+                    "synonyms": "ploy, tactic, move, plot, plan, trick, ruse, manoeuvre",
+                    "antonyms": ""
+                }
+            ],
+            "derivations": []
+        },
+        {
+            "name": "din",
+            "type": "noun",
+            "definitions": [
+                {
+                    "definition": "a loud, unpleasant, and prolonged noise",
+                    "example": "The fans made an awful din at the music concert",
+                    "synonyms": "noise, racket, rumpus, ruckus, cacophony, uproar, commotion",
+                    "antonyms": "silence, quiet"
+                }
+            ],
+            "derivations": []
+        },
+        {
+            "name": "disarray",
+            "type": "noun",
+            "definitions": [
+                {
+                    "definition": "a state of disorganisation or untidiness",
+                    "example": "The guests left her house in total disarray",
+                    "synonyms": "anarchy, chaos, disharmony, shambles",
+                    "antonyms": "harmony, order"
+                },
+                {
+                    "definition": "throw (someone or something) into a state of disorganisation or untidiness",
+                    "example": "The unexpected inspection disarrayed the usual schedule",
+                    "synonyms": "disarrange, unsettle, disorganise",
+                    "antonyms": "organise"
+                }
+            ],
+            "derivations": []
+        },
+        {
+            "name": "disclose",
+            "type": "verb",
+            "definitions": [
+                {
+                    "definition": "to make something known publicly, or to show something that was hidden",
+                    "example": "They disclosed her name to the press",
+                    "synonyms": "reveal, divulge, impart, admit, confess, leak, unveil",
+                    "antonyms": "conceal, cover, suppress, hide"
+                }
+            ],
+            "derivations": []
         }
     ]
 }

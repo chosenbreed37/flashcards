@@ -88,12 +88,30 @@ describe('Deck', () => {
         expect(f.text()).toBe(words[1].name);
     });
 
-    it('back button moves to the previous word', () => {
+    it('last button moves to the last word', () => {
+        const deckHandle = deck();
+        const e = deckHandle.find('#lastButton').first();
+        e.simulate('click');
+        const f = deckHandle.find('#title');
+        const lastWord = words[words.length - 1];
+        expect(f.text()).toBe(lastWord.name);
+    });
+
+    it('last button moves to the last word', () => {
+        const deckHandle = deck();
+        const e = deckHandle.find('#lastButton').first();
+        e.simulate('click');
+        const f = deckHandle.find('#title');
+        const lastWord = words[words.length - 1];
+        expect(f.text()).toBe(lastWord.name);
+    });
+
+    it('first button moves to the first word', () => {
         const state = {...initialState, 
-            currentIndex: 1
+            currentIndex: words.length - 1
         };
         const deckHandle = deck(state);
-        const e = deckHandle.find('#backButton').first();
+        const e = deckHandle.find('#firstButton').first();
         e.simulate('click');
         const f = deckHandle.find('#title');
         expect(f.text()).toBe(words[0].name);

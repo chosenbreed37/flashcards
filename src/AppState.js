@@ -11,6 +11,12 @@ const operations = {
     goBack: () => (state) => {
         const nextIndex = state.currentIndex - 1;
         return { ...state, currentIndex: nextIndex }
+    },
+    goToFirst: () => (state) => {
+        return {...state, currentIndex: 0}
+    },
+    goToLast: () => (state) => {
+        return {...state, currentIndex: state.words.length - 1}
     }
 }
 
