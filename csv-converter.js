@@ -9,7 +9,7 @@ const data = [];
 
 console.log(`Processing [${csvFilePath}]...`);
 
-const predicate = (e, entry) => e.id === entry.id && e.name === entry.name;
+const predicate = (e, entry) => e.id === entry.id && e.name === entry.name && e.type === entry.type;
 
 csv()
     .fromFile(csvFilePath)
