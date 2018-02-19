@@ -3,7 +3,8 @@
 }
 
 .definitions {
-    height: 400px;
+    height: 360px;
+    padding-top: 0;
 }
 
 .header span {

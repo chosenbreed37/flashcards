@@ -20,7 +20,7 @@ export class Deck extends Component {
 
         return (
             <Card className='deck'>
-                <CardHeader>
+                <CardHeader style={{padding: 0, paddingBottom: '8px'}}>
                     <div className='header'>
                         <span id='title' className='title'>{name}</span>
                         <span id='subtitle' className='subtitle'>{`(${type})`}</span>
