@@ -1,8 +1,18 @@
 .App {
   font-size: 16px;
   text-align: center;
+  min-height: 400px;
 }
 
 .App-title {
   font-size: 1.5em;
+}
+
+.Header {
+  max-height: 48px;
+}
+
+.Header div {
+  max-height: 36px;
+  line-height: 36px;
 }
