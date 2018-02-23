@@ -17,6 +17,7 @@ csv()
         const match = data.find(e => predicate(e, entry));
         if (match) {
             match.definitions.push(utils.extractDefinition(entry));
+            match.derivations = match.derivations.concat(utils.extractDerivations(entry));
         } else {
             data.push(utils.extractWord(entry));
         }
