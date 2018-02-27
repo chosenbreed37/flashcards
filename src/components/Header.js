@@ -4,26 +4,41 @@ import FlatButton from 'material-ui/FlatButton';
 
 class Header extends React.Component {
     state = {
-        valueSingle: '3',
-        valueMultiple: ['3', '5'],
+        valueSingle: '3'
     };
 
     handleChangeSingle = (event, value) => {
         this.setState({
-            valueSingle: value,
+            valueSingle: value
         });
     };
 
-    render = () =>
-        (
+    onSignOut = () => {
+        const { setAppState, operations, appState } = this.props;
+        const { authorise, signOut } = operations;
+
+        setAppState(signOut);
+    }
+
+    render = () => {
+        const { setAppState, operations, appState } = this.props;
+        const { authorise, signOut } = operations;
+        
+        const { isLoggedIn } = appState;
+
+        const SignInButton = <FlatButton id='sign-in-button' label='Sign In' onClick={authorise} />
+        const SignOutButton = <FlatButton id='sign-out-button' label='Sign Out' onClick={this.onSignOut} />
+
+        return (
             <div>
-                <AppBar style={{verticalAlign: 'center'}}
-                    title={<span>Flashcards</span>}
+                <AppBar style={{ verticalAlign: 'center' }}
+                    title={<span id='header-title'>Flashcards</span>}
                     titleStyle={{ height: '48px', lineHeight: '48px', margin: '5px auto' }}
-                    iconElementRight={<FlatButton label="Sign In" />}
+                    iconElementRight={isLoggedIn ? SignOutButton : SignInButton}
                 />
             </div>
         );
+    }
 }
 
 export default Header;

@@ -1,15 +1,21 @@
+import React from 'react';
 import { Component } from 'react';
-import { setIdToken, setAccessToken } from '../utilities/auth-service';
 
-class Callback extends Component {
-
-  constructor() {
-    super()
+export class Callback extends Component {
+  constructor(props) {
+    super(props);
   }
 
-  componentDidMount() {
-    setAccessToken();
-    setIdToken();
+  async componentDidMount() {
+    const { setAppState, operations: { signIn, setSession, getAuthenticationResult }, appState } = this.props;
+        
+    const authResult = await getAuthenticationResult();
+    setSession(authResult);
+
+    if (authResult && authResult.accessToken){
+      setAppState(signIn);
+    }
+    
     window.location.href = "/";
   }
 
@@ -17,5 +23,3 @@ class Callback extends Component {
     return null;
   }
 }
-
-export default Callback;
