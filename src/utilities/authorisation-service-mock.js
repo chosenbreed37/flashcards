@@ -24,7 +24,7 @@ export const setSession = (authResult) => {
 }
 
 export const isAuthenticated = () => {
-    return true;
+    return false;
 }
 
 export const unauthorise = () => {

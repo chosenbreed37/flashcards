@@ -20,10 +20,6 @@ class App extends Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    console.log('>>> app componentDidMount')
-  }
-
   render() {
     return (
       <div className='App'>
@@ -38,7 +34,9 @@ class App extends Component {
 
             <hr /> */}
             <Switch>
-              <Route exact path='/' component={Home} />
+              <Route exact path='/' render={
+                (props) => <Deck {...props} {...this.props } />
+              } />
               <Route path='/callback' render={
                 (props) => <Callback {...props} {...this.props} />
               } />

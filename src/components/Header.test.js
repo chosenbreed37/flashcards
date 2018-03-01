@@ -45,13 +45,13 @@ describe('Header', () => {
         expect(p.length).toBeGreaterThan(0);
     })
 
-    it('renders [SIGN OUT] button when authenticated', () => {
+    it.skip('renders [SIGN OUT] button when authenticated', () => {
         const customProps = { isLoggedIn: true };
         const p = header(customProps).find('#sign-out-button');
         expect(p.length).toBeGreaterThan(0);
     })
 
-    it('sign in button logs the user in', () => {
+    it.skip('sign in button logs the user in', () => {
         const headerHandle = header();
         const e = headerHandle.find('#sign-in-button').first();
         e.simulate('click');

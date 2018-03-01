@@ -1,7 +1,8 @@
 import { WebAuth } from 'auth0-js';
 
-const CLIENT_ID = 'jPbxaoIZiWnKBlFho4hmCDlv7i0k7RED';
-const DOMAIN = 'functional-first.eu.auth0.com';
+const CLIENT_ID = process.env.REACT_APP_AUTH_CLIENT_ID;
+const DOMAIN = process.env.REACT_APP_AUTH_DOMAIN;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const webAuth = new WebAuth(
     {
@@ -10,7 +11,7 @@ const webAuth = new WebAuth(
         responseType: 'token id_token',
         // audience: 'https://function-first.eu.auth0.com/userinfo',
         scope: 'openid profile',
-        redirectUri: 'http://localhost:3000/callback' //window.location.href + '/callback'
+        redirectUri: `${BASE_URL}/callback` //window.location.href + '/callback'
     }
 );
 
