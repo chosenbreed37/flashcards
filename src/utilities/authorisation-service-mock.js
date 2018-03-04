@@ -1,11 +1,11 @@
-const getSesssion = () => {
+export const getSession = () => {
     const accessToken = 'access-token';
     return {
         accessToken
     };
 };
 
-const getUserProfile = (accessToken) => {
+export const getUserProfile = (accessToken) => {
     return Promise.resolve({});
 }
 

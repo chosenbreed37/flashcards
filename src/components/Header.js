@@ -3,19 +3,9 @@ import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 
 class Header extends React.Component {
-    state = {
-        valueSingle: '3'
-    };
-
-    handleChangeSingle = (event, value) => {
-        this.setState({
-            valueSingle: value
-        });
-    };
 
     onSignOut = () => {
-        const { setAppState, operations, appState } = this.props;
-        const { authorise, signOut } = operations;
+        const { setAppState, operations: { signOut } } = this.props;
 
         setAppState(signOut);
     }

@@ -3,7 +3,6 @@ import { CardDefinition } from './CardDefinition';
 import { DerivedWord } from './DerivedWord';
 import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 import IconButton from 'material-ui/IconButton';
-import Divider from 'material-ui/Divider';
 
 import './Deck.css';
 

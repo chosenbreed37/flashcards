@@ -10,12 +10,12 @@ const webAuth = new WebAuth(
         clientID: CLIENT_ID,
         responseType: 'token id_token',
         // audience: 'https://function-first.eu.auth0.com/userinfo',
-        scope: 'openid profile',
-        redirectUri: `${BASE_URL}/callback` //window.location.href + '/callback'
+        scope: 'openid profile email',
+        redirectUri: `${BASE_URL}/callback`
     }
 );
 
-const getSesssion = () => {
+export const getSession = () => {
     const accessToken = localStorage.getItem('access_token');
 
     return {
@@ -23,7 +23,7 @@ const getSesssion = () => {
     }
 };
 
-const getUserProfile = (accessToken) => {
+export const getUserProfile = (accessToken) => {
     return new Promise((resolve, reject) => {
         webAuth.client.userInfo(accessToken, (err, result) => {
             if (err) {
