@@ -5,7 +5,6 @@ import { Deck } from './Deck';
 import { CardDefinition } from './CardDefinition';
 import AppState from '../AppState';
 import { model } from '../data/model';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 configure({ adapter: new Adapter() });
 
@@ -22,11 +21,9 @@ describe('Deck', () => {
     const deck = (state) => {
         if (!mountedDeck) {
             mountedDeck = mount(
-                <MuiThemeProvider>
-                    <AppState state={state || initialState}>
-                        <Deck />
-                    </AppState>
-                </MuiThemeProvider>
+                <AppState state={state || initialState}>
+                    <Deck />
+                </AppState>
             );
         }
         return mountedDeck;
@@ -75,7 +72,7 @@ describe('Deck', () => {
 
     it('next button is disabled at the end', () => {
         const currentIndex = initialState.words.length - 1;
-        const state = {...initialState, currentIndex };
+        const state = { ...initialState, currentIndex };
         const e = deck(state).find('#nextButton').first();
         expect(e.prop('disabled')).toBe(true);
     });
@@ -107,7 +104,8 @@ describe('Deck', () => {
     });
 
     it('first button moves to the first word', () => {
-        const state = {...initialState, 
+        const state = {
+            ...initialState,
             currentIndex: words.length - 1
         };
         const deckHandle = deck(state);

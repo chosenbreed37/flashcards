@@ -1,6 +1,5 @@
 import React from 'react';
-import AppBar from 'material-ui/AppBar';
-import FlatButton from 'material-ui/FlatButton';
+import { ActionButton } from './ActionButton';
 
 class Header extends React.Component {
 
@@ -11,21 +10,21 @@ class Header extends React.Component {
     }
 
     render = () => {
-        const { setAppState, operations, appState } = this.props;
-        const { authorise, signOut } = operations;
-        
+        const { operations, appState } = this.props;
+        const { authorise } = operations;
+
         const { isLoggedIn } = appState;
 
-        const SignInButton = <FlatButton id='sign-in-button' label='Sign In' onClick={authorise} />
-        const SignOutButton = <FlatButton id='sign-out-button' label='Sign Out' onClick={this.onSignOut} />
+        const SignInButton = <ActionButton id='sign-in-button' label='Sign In' onClick={authorise} />
+        const SignOutButton = <ActionButton id='sign-out-button' label='Sign Out' onClick={this.onSignOut} />
 
         return (
             <div>
-                <AppBar style={{ verticalAlign: 'center' }}
-                    title={<span id='header-title'>Flashcards</span>}
-                    titleStyle={{ height: '48px', lineHeight: '48px', margin: '5px auto' }}
-                    iconElementRight={isLoggedIn ? SignOutButton : SignInButton}
-                />
+                <div style={{ verticalAlign: 'center' }}>
+                    <span style={{ height: '48px', lineHeight: '48px', margin: '5px auto' }} id='header-title'>Flashcards</span>
+
+                    {isLoggedIn ? SignOutButton : SignInButton}
+                </div>
             </div>
         );
     }

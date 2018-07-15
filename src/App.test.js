@@ -4,7 +4,6 @@ import App from './App';
 import AppState from './AppState';
 import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 configure({ adapter: new Adapter() });
 
@@ -13,11 +12,9 @@ describe('App', () => {
   const app = () => {
     if (!mountedApp) {
       mountedApp = mount(
-        <MuiThemeProvider>
           <AppState>
             <App />
           </AppState>
-        </MuiThemeProvider>
       );
     }
     return mountedApp;

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { CardDefinition } from './CardDefinition';
 import { DerivedWord } from './DerivedWord';
-import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
-import IconButton from 'material-ui/IconButton';
+import { ActionButton } from './ActionButton';
 
 import './Deck.css';
 
@@ -18,45 +17,28 @@ export class Deck extends Component {
         const disableForward = !canGoForward(appState);
 
         return (
-            <Card className='deck'>
-                <CardHeader style={{padding: 0, paddingBottom: '8px'}}>
+            <div className='deck'>
+                <div style={{padding: 0, paddingBottom: '8px'}}>
                     <div className='header'>
                         <span id='title' className='title'>{name}</span>
                         <span id='subtitle' className='subtitle'>{`(${type})`}</span>
                     </div>
-                </CardHeader>
-                {/* <Divider /> */}
-                <CardText className='definitions'>
+                </div>
+                <div className='definitions'>
                     {definitions.map((d, index) => (<CardDefinition key={index} {...d} />))}
                     {derivations.map((d, index) => (<DerivedWord key={index} {...d} />))}
-                </CardText>
-                <CardActions className='actions'>
-                    <IconButton id='firstButton' onClick={() => setAppState(goToFirst)} disabled={disableBack} >
-                        <svg fill="#000000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z" />
-                            <path d="M24 24H0V0h24v24z" fill="none" />
-                        </svg>
-                    </IconButton>
-                    <IconButton id='backButton' onClick={() => setAppState(goBack)} disabled={disableBack}>
-                        <svg fill="#000000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                            <path d="M0 0h24v24H0z" fill="none" />
-                        </svg>
-                    </IconButton>
-                    <IconButton id='nextButton' onClick={() => setAppState(goForward)} disabled={disableForward}>
-                        <svg fill="#000000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                            <path d="M0 0h24v24H0z" fill="none" />
-                        </svg>
-                    </IconButton>
-                    <IconButton id='lastButton' onClick={() => setAppState(goToLast)} disabled={disableForward}>
-                        <svg fill="#000000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z" />
-                            <path d="M0 0h24v24H0V0z" fill="none" />
-                        </svg>
-                    </IconButton>
-                </CardActions>
-            </Card>
+                </div>
+                <div className='actions'>
+                    <ActionButton id='firstButton' label='<<' onClick={() => setAppState(goToFirst)} disabled={disableBack} >
+                    </ActionButton>
+                    <ActionButton id='backButton'label='<' onClick={() => setAppState(goBack)} disabled={disableBack}>
+                    </ActionButton>
+                    <ActionButton id='nextButton' label='>' onClick={() => setAppState(goForward)} disabled={disableForward}>
+                    </ActionButton>
+                    <ActionButton id='lastButton' label='>>' onClick={() => setAppState(goToLast)} disabled={disableForward}>
+                    </ActionButton>
+                </div>
+            </div>
         )
     }
 }

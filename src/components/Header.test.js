@@ -3,7 +3,6 @@ import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Header from './Header';
 import AppState from '../AppState';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 configure({ adapter: new Adapter() });
 
@@ -14,11 +13,9 @@ describe('Header', () => {
     const header = (state) => {
         if (!mountedHeader) {
             mountedHeader = mount(
-                <MuiThemeProvider>
-                    <AppState state={state || initialState}>
-                        <Header />
-                    </AppState>
-                </MuiThemeProvider>
+                <AppState state={state || initialState}>
+                    <Header />
+                </AppState>
             );
         }
         return mountedHeader;
