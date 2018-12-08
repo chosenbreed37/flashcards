@@ -1,3 +1,12 @@
 {
-    
+    "id": "1",
+    "testId": "1",
+    "answers": [
+        {
+            "questionId": "1",
+            "answer": {
+                "key": "a"
+            }
+        }
+    ]
 }
